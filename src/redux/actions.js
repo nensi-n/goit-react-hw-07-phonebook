@@ -7,8 +7,8 @@ export const filterContacts = createAction("contacts/filterContacts");
 
 export const addContact = createAction(
   "contacts/addContact",
-  (name, number) => ({
-    payload: { id: shortid.generate(), name, number },
+  (name, phone) => ({
+    payload: { id: shortid.generate(), name, phone },
   })
 );
 

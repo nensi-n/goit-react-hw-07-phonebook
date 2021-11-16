@@ -13,10 +13,10 @@ function ContactForm() {
   const handleSubmite = (e) => {
     e.preventDefault();
     const name = e.currentTarget.name.value;
-    const number = e.currentTarget.number.value;
+    const phone = e.currentTarget.phone.value;
     const newContact = {
       name,
-      number,
+      phone,
     };
     if (
       contacts.find(
@@ -26,8 +26,8 @@ function ContactForm() {
       toast.info(`🤔 "${name}" contact is already in use`);
       e.currentTarget.reset();
       return;
-    } else if (contacts.find((contact) => number === contact.number)) {
-      toast.info(`🤔 "${number}"" is already in use`, {
+    } else if (contacts.find((contact) => phone === contact.phone)) {
+      toast.info(`🤔 "${phone}" is already in use`, {
         autoClose: 2500,
       });
     }
@@ -53,7 +53,7 @@ function ContactForm() {
         <input
           className="input-field"
           type="tel"
-          name="number"
+          name="phone"
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
           title="Номер телефона должен состоять цифр и может содержать пробелы, тире, круглые скобки и может начинаться с +"
           required
