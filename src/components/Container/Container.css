@@ -4,7 +4,12 @@ body {
   font-size: 12px;
   line-height: 30px;
   color: #777;
-  background: #78e9f1f3;
+  background: rgb(63, 94, 251);
+  background: radial-gradient(
+    circle,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
 }
 
 input[type="text"],
@@ -17,7 +22,7 @@ button[type="submit"] {
 }
 
 .container {
-  max-width: 500px;
+  max-width: 700px;
   width: 100%;
   margin: 0 auto;
   position: relative;
